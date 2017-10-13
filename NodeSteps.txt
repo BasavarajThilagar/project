@@ -1,0 +1,11 @@
+Node:
+1. Create a folder
+2. Paste 3 files-cd.exe gd.exe s.jar
+3. create a text file
+4. type following cmd & save
+java -Dwebdriver.chrom.driver=c.exe -Dwebdriver.gecko.driver=g.exe -jar s.jar
+5. rename txt file to .bat
+6. double click on batch file
+7. msg->Selenium Server is Up & Runing...
+
+8. we should know IP address of node (use ipconfig)

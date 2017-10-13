@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <test name="TestFirefox(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:4444/wd/hub"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="script.VerifyProductVersion">
         <methods>
@@ -10,6 +12,47 @@
           <include name="testProductVersion"/>
         </methods>
       </class> <!-- script.VerifyProductVersion -->
+      <class name="script.ValidLogin">
+        <methods>
+          <include name="testValidLogin"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.ValidLogin -->
+      <class name="script.InvalidLogin">
+        <methods>
+          <include name="testInvalidLogin"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.InvalidLogin -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestFirefox(failed) -->
+  <test name="TestChrome(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:4444/wd/hub"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="script.VerifyProductVersion">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="testProductVersion"/>
+        </methods>
+      </class> <!-- script.VerifyProductVersion -->
+      <class name="script.ValidLogin">
+        <methods>
+          <include name="testValidLogin"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.ValidLogin -->
+      <class name="script.InvalidLogin">
+        <methods>
+          <include name="testInvalidLogin"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.InvalidLogin -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
