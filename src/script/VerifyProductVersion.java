@@ -7,7 +7,7 @@ import page.EnterTimeTrackPage;
 import page.LoginPage;
 
 public class VerifyProductVersion extends BaseTest{
-	@Test(priority=3,groups={"product"})
+	@Test(priority=3,groups={"product"},enabled=false)
 	public void testProductVersion(){
 		String sheet="VerifyProductVersion";
 		String un=Lib.getCellValue(XL_PATH,sheet,1,0);

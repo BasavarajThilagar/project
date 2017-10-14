@@ -6,7 +6,7 @@ import generic.Lib;
 import page.LoginPage;
 
 public class InvalidLogin extends BaseTest{
-	@Test(priority=2,groups={"login"})
+	@Test(priority=2,groups={"login"},enabled=false)
 	public void testInvalidLogin(){
 		int rc=Lib.getRowCount(XL_PATH,"InvalidLogin");
 		for(int i=1;i<=rc;i++){
